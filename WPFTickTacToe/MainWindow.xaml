@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTickTacToe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="Tic Tac Toe by Myles Megaffin" Height="450" Width="800"
         Background="Gray">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="5*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Column="1" Grid.Row="1" MouseMove="Grid_MouseMove">
             <Grid.ColumnDefinitions>
@@ -29,16 +29,35 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Name="btn1" Grid.Column="0" Grid.Row="0" Click="Placement"></Button>
-            <Button Name="btn2" Grid.Column="1" Grid.Row="0" Click="Placement"></Button>
-            <Button Name="btn3" Grid.Column="2" Grid.Row="0" Click="Placement"></Button>
-            <Button Name="btn4" Grid.Column="0" Grid.Row="1" Click="Placement"></Button>
-            <Button Name="btn5" Grid.Column="1" Grid.Row="1" Click="Placement"></Button>
-            <Button Name="btn6" Grid.Column="2" Grid.Row="1" Click="Placement"></Button>
-            <Button Name="btn7" Grid.Column="0" Grid.Row="2" Click="Placement"></Button>
-            <Button Name="btn8" Grid.Column="1" Grid.Row="2" Click="Placement"></Button>
-            <Button Name="btn9" Grid.Column="2" Grid.Row="2" Click="Placement"></Button>
+            <Button Name="btn1" Grid.Column="0" Grid.Row="0" Click="Placement" Background="DarkGray" FontSize="32" Foreground="DarkBlue"></Button>
+            <Button Name="btn2" Grid.Column="1" Grid.Row="0" Click="Placement" Background="DarkGray" FontSize="32" Foreground="DarkBlue"></Button>
+            <Button Name="btn3" Grid.Column="2" Grid.Row="0" Click="Placement" Background="DarkGray" FontSize="32" Foreground="DarkBlue"></Button>
+            <Button Name="btn4" Grid.Column="0" Grid.Row="1" Click="Placement" Background="DarkGray" FontSize="32" Foreground="DarkBlue"></Button>
+            <Button Name="btn5" Grid.Column="1" Grid.Row="1" Click="Placement" Background="DarkGray" FontSize="32" Foreground="DarkBlue"></Button>
+            <Button Name="btn6" Grid.Column="2" Grid.Row="1" Click="Placement" Background="DarkGray" FontSize="32" Foreground="DarkBlue"></Button>
+            <Button Name="btn7" Grid.Column="0" Grid.Row="2" Click="Placement" Background="DarkGray" FontSize="32" Foreground="DarkBlue"></Button>
+            <Button Name="btn8" Grid.Column="1" Grid.Row="2" Click="Placement" Background="DarkGray" FontSize="32" Foreground="DarkBlue"></Button>
+            <Button Name="btn9" Grid.Column="2" Grid.Row="2" Click="Placement" Background="DarkGray" FontSize="32" Foreground="DarkBlue"></Button>
         </Grid>
         <TextBlock Grid.Column ="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="46" Foreground="DarkBlue">Tic Tac Toe</TextBlock>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2.5*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20" Foreground="DarkBlue">Score</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" FontSize="15" Foreground="DarkBlue">X:</TextBlock>
+            <TextBlock Name="XScore" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" FontSize="15" Foreground="DarkBlue">0</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" FontSize="15" Foreground="DarkBlue">O:</TextBlock>
+            <TextBlock Name="OScore" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" FontSize="15" Foreground="DarkBlue">0</TextBlock>
+        </Grid>
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" Width="100" Background="DarkGray" Foreground="DarkBlue" Click="NewGame">New Game</Button>
     </Grid>
 </Window>
